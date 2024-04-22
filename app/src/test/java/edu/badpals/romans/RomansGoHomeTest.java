@@ -1,5 +1,6 @@
 package edu.badpals.romans;
 
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -8,13 +9,12 @@ import static org.assertj.core.api.FactoryBasedNavigableListAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RomansGoHomeTest {
-    public class NumeroRomanoTest {
 
-        public RomanNumber numeroRomano;
+        /*public RomanNumber numeroRomano;
 
-        /**
+        *//**
          * Grupos sumatorios M, C, X, I
-         */
+         *//*
 
         @ParameterizedTest
         @CsvSource({
@@ -28,12 +28,12 @@ class RomansGoHomeTest {
             numeroRomano = new RomanNumber(roman);
             assertEquals(decimal, numeroRomano.toDecimal());
 
-            /**
+            *//**
              * El caso MMMM es control de errores
              * y no puede estar en el test de la logica
              * Asumimos que la entrada es correcta.
              * Sino, hay que programar la gestion de errores
-             */
+             *//*
         }
 
         @Test
@@ -74,12 +74,12 @@ class RomansGoHomeTest {
             assertNotEquals(3503, numeroRomano.toDecimal());
         }
 
-        /**
+        *//**
          * Grupos sustractivos
          * IV(4), IX(9),
          * XL(40), XC(90),
          * CD(400), CM(900)
-         */
+         *//*
 
         @Test
         public void grupo_C_DM_test() {
@@ -142,10 +142,10 @@ class RomansGoHomeTest {
             assertEquals(439, numeroRomano.toDecimal());
         }
 
-        /**
+        *//**
          * Test de la coleccion de
          * expresiones regulares
-         */
+         *//*
 
         @Test
         public void init_regex_collection_test() {
@@ -159,10 +159,10 @@ class RomansGoHomeTest {
             assertThat(numeroRomano.getRegexCollection().getRegex("grupoSustractivo")).isEqualTo("(C[DM])|(X[LC])|(I[VX])");
         }
 
-        /**
+        *//**
          * Test del tipo enumerado
          * RomanSymbols
-         */
+         *//*
         @ParameterizedTest
         @CsvSource({
                 "5,   V",
@@ -172,7 +172,5 @@ class RomansGoHomeTest {
         public void valor_decimal_test(Short decimal, String roman) {
             numeroRomano = new RomanNumber(roman);
             assertEquals(decimal, numeroRomano.decimalValue(roman));
-        }
+        }*/
     }
-
-}

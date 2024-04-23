@@ -8,11 +8,12 @@ public class RomanNumber {
         this.roman = roman;
     }
     public Short toDecimal(){
-        EnumSet<RomanSymbols> romanSymbols = EnumSet.allOf(RomanSymbols.class);
-        if (romanSymbols.contains(RomanSymbols.valueOf(roman))){
-            return (short)RomanSymbols.valueOf(roman).getValue();
+        String cleanNumber = PatternRomanNumber.cleanRomanNumber(roman);
+        short value = 0;
+        for (Character c : cleanNumber.toCharArray()){
+            value += RomanSymbols.valueOf(c.toString()).getValue();
         }
-        return 0;
+        return value;
     }
 
 }

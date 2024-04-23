@@ -19,8 +19,8 @@ class RomansGoHomeTest {
     @ParameterizedTest
     @CsvSource({
             "1000,  M",
-            //"2000,  UMMU",
-            //"3000,  UMMMU"
+            "2000,  UMMU",
+            "3000,  UMMMU"
     })
     public void grupo_M_test(Short decimal, String roman) {
 

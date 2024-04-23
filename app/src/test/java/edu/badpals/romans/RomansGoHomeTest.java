@@ -33,7 +33,7 @@ class RomansGoHomeTest {
          * y no puede estar en el test de la logica
          * Asumimos que la entrada es correcta.
          * Sino, hay que programar la gestion de errores
-         *//*
+         */
         }
 
         @Test
@@ -41,28 +41,28 @@ class RomansGoHomeTest {
 
             String testCase = "UMMMUCCCU";
             numeroRomano = new RomanNumber(testCase);
-            assertEquals(3300, numeroRomano.toDecimal());
+            assertEquals((short)3300,numeroRomano.toDecimal());
         }
 
-        @Test
+        /*@Test
         public void tres_repeticiones_X_test() {
 
             String testCase = "UMMMUXXXU";
             numeroRomano = new RomanNumber(testCase);
 
             assertEquals(3030, numeroRomano.toDecimal());
-        }
+        }*/
 
-        @Test
+        /*@Test
         public void tres_repeticiones_I_test() {
 
             String testCase = "UMMMUIIIU";
             numeroRomano = new RomanNumber(testCase);
 
             assertEquals(3003, numeroRomano.toDecimal());
-        }
+        }*/
 
-        @Test
+        /*@Test
         public void una_D_test() {
 
             String testCase = "UMMMUDUIIIU";
@@ -72,16 +72,16 @@ class RomansGoHomeTest {
             testCase = "MMMUCDUIIIU";
             numeroRomano = new RomanNumber(testCase);
             assertNotEquals(3503, numeroRomano.toDecimal());
-        }
+        }*/
 
-        *//**
+        /**
          * Grupos sustractivos
          * IV(4), IX(9),
          * XL(40), XC(90),
          * CD(400), CM(900)
-         *//*
+         */
 
-        @Test
+        /*@Test
         public void grupo_C_DM_test() {
 
             String testCase = "UCDU";
@@ -91,9 +91,9 @@ class RomansGoHomeTest {
             testCase = "UCMU";
             numeroRomano = new RomanNumber(testCase);
             assertEquals(900, numeroRomano.toDecimal());
-        }
+        }*/
 
-        @Test
+        /*@Test
         public void grupo_X_LC_test() {
 
             String testCase = "UXLU";
@@ -103,9 +103,9 @@ class RomansGoHomeTest {
             testCase = "UXCU";
             numeroRomano = new RomanNumber(testCase);
             assertEquals(90, numeroRomano.toDecimal());
-        }
+        }*/
 
-        @Test
+        /*@Test
         public void grupo_I_VX_test() {
 
             String testCase = "UIVU";
@@ -115,23 +115,23 @@ class RomansGoHomeTest {
             testCase = "UIXU";
             numeroRomano = new RomanNumber(testCase);
             assertEquals(9, numeroRomano.toDecimal());
-        }
+        }*/
 
-        @Test
+        /*@Test
         public void grupos_sumatorios_tres_digitos_test() {
             String testCase = "MMMDCCCLXXXVIII"; // 3888
             numeroRomano = new RomanNumber(testCase);
             assertEquals(3888, numeroRomano.toDecimal());
-        }
+        }*/
 
-        @Test
+        /*@Test
         public void grupos_sumatorios_test() {
             String testCase = "MMDCCLXXVII"; // 2777
             numeroRomano = new RomanNumber(testCase);
             assertEquals(2777, numeroRomano.toDecimal());
-        }
+        }*/
 
-        @Test
+        /*@Test
         public void grupos_substractivos_test() {
             String testCase = "CDXLIV"; // 444
             numeroRomano = new RomanNumber(testCase);
@@ -140,14 +140,14 @@ class RomansGoHomeTest {
             testCase = "CDXXXIX"; // 439
             numeroRomano = new RomanNumber(testCase);
             assertEquals(439, numeroRomano.toDecimal());
-        }
+        }*/
 
-        *//**
+        /**
          * Test de la coleccion de
          * expresiones regulares
-         *//*
 
-        @Test
+*/
+        /*@Test
         public void init_regex_collection_test() {
             String testCase = "V";
             numeroRomano = new RomanNumber(testCase);
@@ -157,13 +157,13 @@ class RomansGoHomeTest {
 
             assertThat(numeroRomano.getRegexCollection().getRegex("grupoSumatorio")).isEqualTo("(?<!C)[DM]|(?<!X)[LC](?![DM])|(?<!I)[VX](?![LC])|I(?![VX])");
             assertThat(numeroRomano.getRegexCollection().getRegex("grupoSustractivo")).isEqualTo("(C[DM])|(X[LC])|(I[VX])");
-        }
+        }*/
 
-        *//**
+        /**
          * Test del tipo enumerado
          * RomanSymbols
-         *//*
-        @ParameterizedTest
+         */
+        /*@ParameterizedTest
         @CsvSource({
                 "5,   V",
                 "4,   IV",
@@ -174,4 +174,3 @@ class RomansGoHomeTest {
             assertEquals(decimal, numeroRomano.decimalValue(roman));
         }*/
     }
-}

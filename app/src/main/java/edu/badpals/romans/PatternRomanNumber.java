@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class PatternRomanNumber {
 
     public static String cleanRomanNumber(String roman){
-        String regex = "(?<!M)(M{0,3})";
+        String regex = "(?<!M)([IVXLCDM]{0,3})";
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(roman);
 

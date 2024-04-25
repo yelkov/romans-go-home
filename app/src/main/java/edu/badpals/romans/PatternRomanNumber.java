@@ -5,9 +5,10 @@ import java.util.regex.Pattern;
 
 public class PatternRomanNumber {
 
-    public static String cleanRomanNumber(String roman){
-        String regex = "(?<!M)([IVXLCDM]{0,3})";
-        Pattern p = Pattern.compile(regex);
+    private static String sumatory = "([IXCM]{0,3}|[VLD])";
+
+    public static String sumatoryPattern(String roman){
+        Pattern p = Pattern.compile(sumatory);
         Matcher m = p.matcher(roman);
 
         String cleanRoman ="";

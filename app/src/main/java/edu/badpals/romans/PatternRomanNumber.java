@@ -12,19 +12,20 @@ public class PatternRomanNumber {
     private static String sumatory = "([IXCM]{1,3}|[VLD])";
     private static String substract = "(I[VX]|X[LC]|C[DM])";
     private static ArrayList<String> romanNumbers = new ArrayList<>();
+    private static String romanString = "";
 
     public static void substractPattern(String roman){
+        romanString = roman;
         Pattern p = Pattern.compile(substract);
         Matcher m = p.matcher(roman);
-
         while(m.find()){
             romanNumbers.add(m.group());
+            romanString = romanString.replace(m.group(), "");
         }
     }
-    public static void sumatoryPattern(String roman){
+    public static void sumatoryPattern(){
         Pattern p = Pattern.compile(sumatory);
-        Matcher m = p.matcher(roman);
-
+        Matcher m = p.matcher(romanString);
         while(m.find()){
             romanNumbers.add(m.group());
         }
@@ -33,7 +34,7 @@ public class PatternRomanNumber {
     public static ArrayList<String> getRomanNumbers(String roman){
         romanNumbers.clear();
         substractPattern(roman);
-        sumatoryPattern(roman);
+        sumatoryPattern();
         return romanNumbers;
     }
 }

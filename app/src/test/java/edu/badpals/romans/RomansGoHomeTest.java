@@ -105,48 +105,49 @@ class RomansGoHomeTest {
             assertEquals((short)90, numeroRomano.toDecimal());
         }
 
-        /*@Test
+        @Test
         public void grupo_I_VX_test() {
 
             String testCase = "UIVU";
             numeroRomano = new RomanNumber(testCase);
-            assertEquals(4, numeroRomano.toDecimal());
+            assertEquals((short)4, numeroRomano.toDecimal());
 
             testCase = "UIXU";
             numeroRomano = new RomanNumber(testCase);
-            assertEquals(9, numeroRomano.toDecimal());
-        }*/
+            assertEquals((short)9, numeroRomano.toDecimal());
+        }
 
-        /*@Test
+        @Test
         public void grupos_sumatorios_tres_digitos_test() {
             String testCase = "MMMDCCCLXXXVIII"; // 3888
             numeroRomano = new RomanNumber(testCase);
-            assertEquals(3888, numeroRomano.toDecimal());
-        }*/
+            assertEquals((short)3888, numeroRomano.toDecimal());
+        }
 
-        /*@Test
+        @Test
         public void grupos_sumatorios_test() {
             String testCase = "MMDCCLXXVII"; // 2777
             numeroRomano = new RomanNumber(testCase);
-            assertEquals(2777, numeroRomano.toDecimal());
-        }*/
+            assertEquals((short)2777, numeroRomano.toDecimal());
+        }
 
-        /*@Test
+        @Test
         public void grupos_substractivos_test() {
             String testCase = "CDXLIV"; // 444
             numeroRomano = new RomanNumber(testCase);
-            assertEquals(444, numeroRomano.toDecimal());
+            assertEquals((short)444, numeroRomano.toDecimal());
 
             testCase = "CDXXXIX"; // 439
             numeroRomano = new RomanNumber(testCase);
-            assertEquals(439, numeroRomano.toDecimal());
-        }*/
+            assertEquals((short)439, numeroRomano.toDecimal());
+        }
 
         /**
          * Test de la coleccion de
          * expresiones regulares
-
-*/
+         *
+         * Este test no lo usamos, dado que planteamos el ejercicio de otra forma
+        */
         /*@Test
         public void init_regex_collection_test() {
             String testCase = "V";
@@ -163,7 +164,7 @@ class RomansGoHomeTest {
          * Test del tipo enumerado
          * RomanSymbols
          */
-        /*@ParameterizedTest
+        @ParameterizedTest
         @CsvSource({
                 "5,   V",
                 "4,   IV",
@@ -171,6 +172,6 @@ class RomansGoHomeTest {
         })
         public void valor_decimal_test(Short decimal, String roman) {
             numeroRomano = new RomanNumber(roman);
-            assertEquals(decimal, numeroRomano.decimalValue(roman));
-        }*/
+            assertEquals(decimal, numeroRomano.toDecimal());
+        }
     }

@@ -81,29 +81,29 @@ class RomansGoHomeTest {
          * CD(400), CM(900)
          */
 
-        /*@Test
+        @Test
         public void grupo_C_DM_test() {
 
             String testCase = "UCDU";
             numeroRomano = new RomanNumber(testCase);
-            assertEquals(400, numeroRomano.toDecimal());
+            assertEquals((short) 400, numeroRomano.toDecimal());
 
             testCase = "UCMU";
             numeroRomano = new RomanNumber(testCase);
-            assertEquals(900, numeroRomano.toDecimal());
-        }*/
+            assertEquals((short)900, numeroRomano.toDecimal());
+        }
 
-        /*@Test
+        @Test
         public void grupo_X_LC_test() {
 
             String testCase = "UXLU";
             numeroRomano = new RomanNumber(testCase);
-            assertEquals(40, numeroRomano.toDecimal());
+            assertEquals((short)40, numeroRomano.toDecimal());
 
             testCase = "UXCU";
             numeroRomano = new RomanNumber(testCase);
-            assertEquals(90, numeroRomano.toDecimal());
-        }*/
+            assertEquals((short)90, numeroRomano.toDecimal());
+        }
 
         /*@Test
         public void grupo_I_VX_test() {
